@@ -11,11 +11,11 @@ echo "# Delete: " $DELETE
 echo "###########################################################################"
 
 args=()
-(( test == 1 )) && args+=( '-la' )
 args+=( "$INPUT" '-d' "$OUTPUT" '-q' "$QUALITY" '-m' "$PRESET" )
 (( OVERIDE == "true" )) && args+= ( '-o' )
 (( DELETE == "true" )) && args+= ( '--delete' )
 
-echo ${args[@]}
+echo ""
+echo "Executing h265ize " ${args[@]}
 
 /usr/local/bin/h265ize "${args[@]}"
