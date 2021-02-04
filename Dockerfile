@@ -24,6 +24,6 @@ ENV INPUT="/input" \
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
-RUN chmod +x run.sh
+RUN chmod +x /h265ize/run.sh
 
-ENTRYPOINT [ "./run.sh" ]
+ENTRYPOINT [ "/h265ize/run.sh" ]
