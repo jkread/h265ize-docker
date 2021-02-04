@@ -20,7 +20,9 @@ ENV INPUT="/input" \
     # Overide: Allows conversion of videos that are already encoded by the hevc codec
     OVERIDE="false" \
     # Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
-    DELETE="false"
+    DELETE="false" \
+    # Amount of time to wait after finishing the queue
+    SLEEP=900
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
