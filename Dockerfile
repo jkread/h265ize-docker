@@ -12,7 +12,7 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
 COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
-    OUTPUT="/ouput" \
+    OUTPUT="/output" \
     # Quality 0-51 (higher number = lower quality/smaller file)
     QUALITY="19" \
     # Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
