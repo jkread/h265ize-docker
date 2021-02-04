@@ -12,8 +12,8 @@ echo "##########################################################################
 
 args=()
 args+=( "$INPUT" '-d' "$OUTPUT" '-q' "$QUALITY" '-m' "$PRESET" )
-[ OVERIDE = "true" ] && args+= ( '-o' )
-[ DELETE = "true" ] && args+= ( '--delete' )
+[ OVERIDE = "true" ] && args+=( '-o' )
+[ DELETE = "true" ] && args+=( '--delete' )
 
 echo ""
 echo "Executing h265ize " ${args[@]}
