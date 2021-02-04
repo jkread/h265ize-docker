@@ -6,7 +6,7 @@ LABEL h265ize_version="bleading edge" architecture="amd64"
 RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install FallingSnow/h265ize --global --no-optional && \
     apk del git && \
-    mkdir /input && mkdir /output && \
+    mkdir /input && mkdir /output && mkdir /h265ize \
     rm /var/cache/apk/*
     
 COPY run.sh /h265ize/run.sh
