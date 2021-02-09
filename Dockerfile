@@ -14,7 +14,7 @@ COPY run.sh /h265ize/run.sh
 ENV INPUT="/input" \
     OUTPUT="/output" \
     # Quality 0-51 (higher number = lower quality/smaller file)
-    QUALITY="19" \
+    QUALITY="" \
     # Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
     PRESET="medium" \
     # Overide: Allows conversion of videos that are already encoded by the hevc codec
@@ -22,7 +22,9 @@ ENV INPUT="/input" \
     # Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
     DELETE="false" \
     # Amount of time to wait after finishing the queue
-    SLEEP=900
+    SLEEP=900 \
+    # Preset Options: anime-high, anime-medium, ssim
+    PRESET=""
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
