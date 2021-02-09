@@ -16,7 +16,7 @@ ENV INPUT="/input" \
     # Quality 0-51 (higher number = lower quality/smaller file)
     QUALITY="" \
     # Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
-    PRESET="medium" \
+    PRESET="" \
     # Overide: Allows conversion of videos that are already encoded by the hevc codec
     OVERIDE="false" \
     # Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
