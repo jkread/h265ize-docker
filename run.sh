@@ -13,8 +13,10 @@ echo "##########################################################################
 
 args=()
 args+=( "$INPUT" '-d' "$OUTPUT" '-q' "$QUALITY" '-m' "$PRESET" )
+[ "$QUALITY" != "" ] && args+=( '-q' "quality" )
 [ "$OVERIDE" = "true" ] && args+=( '-o' )
 [ "$DELETE" = "true" ] && args+=( '--delete' )
+[ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" )
 
 while :
 do
