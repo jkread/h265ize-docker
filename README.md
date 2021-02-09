@@ -33,6 +33,8 @@ A file will appear straight away in the output directory while it's **still** be
     PRESET - Default (medium), Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
     OVERIDE - Default (false), Allows conversion of videos that are already encoded by the hevc codec
     DELETE - Default (false), Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
+    SLEEP - 
+    ASPRESET -
 
 #### Paths in container
 
