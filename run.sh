@@ -12,11 +12,12 @@ echo "# Sleep: " $SLEEP
 echo "###########################################################################"
 
 args=()
-args+=( "$INPUT" '-d' "$OUTPUT" '-q' "$QUALITY" '-m' "$PRESET" )
+args+=( "$INPUT" '-d' "$OUTPUT" )
 [ "$QUALITY" != "" ] && args+=( '-q' "quality" )
 [ "$OVERIDE" = "true" ] && args+=( '-o' )
 [ "$DELETE" = "true" ] && args+=( '--delete' )
 [ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" )
+[ "$PRESET" != "" ] && args+=( '-m' "$PRESET" )
 
 while :
 do
