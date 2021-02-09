@@ -13,7 +13,7 @@ echo "##########################################################################
 
 args=()
 args+=( "$INPUT" '-d' "$OUTPUT" )
-[ "$QUALITY" != "" ] && args+=( '-q' "quality" )
+[ "$QUALITY" != "" ] && args+=( '-q' "$QUALITY" )
 [ "$OVERIDE" = "true" ] && args+=( '-o' )
 [ "$DELETE" = "true" ] && args+=( '--delete' )
 [ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" )
