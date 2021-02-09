@@ -24,7 +24,7 @@ ENV INPUT="/input" \
     # Amount of time to wait after finishing the queue
     SLEEP=900 \
     # Preset Options: anime-high, anime-medium, ssim
-    PRESET=""
+    ASPRESET=""
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
