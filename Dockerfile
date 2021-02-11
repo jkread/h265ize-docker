@@ -13,8 +13,9 @@ COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
     OUTPUT="/output" \
-    # Quality 0-51 (higher number = lower quality/smaller file)
-    QUALITY="" \
+    # Quality (choose either QP or CRF) 0-51 (higher number = lower quality/smaller file)
+    QP="" \
+    CRF="" \
     # Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
     PRESET="" \
     # Overide: Allows conversion of videos that are already encoded by the hevc codec
