@@ -26,6 +26,7 @@ ENV INPUT="/input" \
     SLEEP=900 \
     # Preset Options: anime-high, anime-medium, ssim
     ASPRESET="" \
+    TUNE="" \
     SCALE="" \
     BITDEPTH="" \
     WEIGHTB="false" \
