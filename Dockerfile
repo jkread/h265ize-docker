@@ -26,8 +26,11 @@ ENV INPUT="/input" \
     SLEEP=900 \
     # Preset Options: anime-high, anime-medium, ssim
     ASPRESET="none" \
-    SCALE="false" \
+    SCALE="" \
     BITDEPTH="0" \
+    WEIGHTB="false"
+    BFRAMES=""
+    
     EXTRA=""
 
 VOLUME ["/input", "/output"]
