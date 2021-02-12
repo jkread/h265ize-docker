@@ -28,6 +28,7 @@ ENV INPUT="/input" \
     ASPRESET="" \
     TUNE="" \
     SCALE="" \
+    REF="" \
     BITDEPTH="" \
     WEIGHTB="false" \
     BFRAMES="" \
