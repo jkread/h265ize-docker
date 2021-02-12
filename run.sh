@@ -14,16 +14,16 @@ echo "##########################################################################
 args=()
 args+=( "$INPUT" '-d' "$OUTPUT" )
 [ "$QUALITY" != "" ] && args+=( '-q' "$QUALITY" )
-[ "$OVERIDE" = "true" ] && args+=( '-o' )
-[ "$DELETE" = "true" ] && args+=( '--delete' )
+[ "$OVERIDE" == "true" ] && args+=( '-o' )
+[ "$DELETE" == "true" ] && args+=( '--delete' )
 [ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" )
 [ "$PRESET" != "" ] && args+=( '-m' "$PRESET" )
 [ "$TUNE" != "" ] && args+=( '--tune' "$TUNE" )
 [ "$REF" != "" ] && args+=( '--ref' "$REF" )
-[ "$WEIGHTB" = "true" ] && args+=( '--weightb' )
+[ "$WEIGHTB" == "true" ] && args+=( '--weightb' )
 [ "$BFRAMES" != "" ] && args+=( '--bframes' "$BFRAMES" )
 [ "$SCALE" != "" ] && args+=( '--scale' "$SCALE" )
-
+[ "$DEBUG" == "true" ] && args+=( '--debug' )
 
 while :
 do
