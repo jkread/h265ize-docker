@@ -32,7 +32,8 @@ ENV INPUT="/input" \
     BITDEPTH="" \
     WEIGHTB="false" \
     BFRAMES="" \
-    EXTRA=""
+    EXTRA="" \
+    DEBUG=false
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
