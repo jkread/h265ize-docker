@@ -28,7 +28,7 @@ ENV INPUT="/input" \
     ASPRESET="none" \
     SCALE="" \
     BITDEPTH="0" \
-    WEIGHTB="false"
+    WEIGHTB="false" \
     BFRAMES=""
     
     EXTRA=""
