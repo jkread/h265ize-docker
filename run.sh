@@ -18,6 +18,10 @@ args+=( "$INPUT" '-d' "$OUTPUT" )
 [ "$DELETE" = "true" ] && args+=( '--delete' )
 [ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" )
 [ "$PRESET" != "" ] && args+=( '-m' "$PRESET" )
+[ "$WEIGHTB" = "true" ] && args+=( '--weightb' )
+[ "$BFRAMES" != "" ] && args+=( '--bframes' "$BFRAMES" )
+[ "$SCALE" != "" ] && args+=( '--scale' "$SCALE" )
+
 
 while :
 do
