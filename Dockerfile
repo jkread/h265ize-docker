@@ -29,8 +29,7 @@ ENV INPUT="/input" \
     SCALE="" \
     BITDEPTH="0" \
     WEIGHTB="false" \
-    BFRAMES=""
-    
+    BFRAMES="" \
     EXTRA=""
 
 VOLUME ["/input", "/output"]
