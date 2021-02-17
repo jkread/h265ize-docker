@@ -35,6 +35,9 @@ A file will appear straight away in the output directory while it's **still** be
     DELETE - Default (false), Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
     SLEEP - 
     ASPRESET -
+    WEIGHTB -
+    BFRAMES -
+    STATSFREQUENCY - Default (15), How frequent the encode process outputs in seconds
 
 #### Paths in container
 
