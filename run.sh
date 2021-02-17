@@ -24,6 +24,7 @@ args+=( "$INPUT" '-d' "$OUTPUT" )
 [ "$BFRAMES" != "" ] && args+=( '--bframes' "$BFRAMES" )
 [ "$SCALE" != "" ] && args+=( '--scale' "$SCALE" )
 [ "$DEBUG" == "true" ] && args+=( '--debug' )
+[ "$STATSFREQUENCY" != "" ] && args+=( ' --stats-frequency ', "$STATSFREQUENCY" )
 
 while :
 do
