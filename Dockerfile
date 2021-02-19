@@ -6,13 +6,14 @@ LABEL h265ize_version="bleading edge" architecture="amd64"
 RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install jkread/h265ize --global --no-optional && \
     apk add --no-cache bash && apk del git && \
-    mkdir /input && mkdir /output && mkdir /h265ize && \
+    mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
     rm /var/cache/apk/*
     
 COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
     OUTPUT="/output" \
+    TEMP="/temp" \
     # Quality (choose either QP or CRF) 0-51 (higher number = lower quality/smaller file)
     QP="" \
     CRF="" \
@@ -34,7 +35,9 @@ ENV INPUT="/input" \
     BFRAMES="" \
     EXTRA="" \
     DEBUG=false \
-    STATSFREQUENCY=15
+    STATSFREQUENCY=15 \
+    PREVIEW="false" \
+    REPLACE="false"
 
 VOLUME ["/input", "/output"]
 WORKDIR /h265ize
