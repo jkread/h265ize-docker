@@ -39,7 +39,7 @@ ENV INPUT="/input" \
     PREVIEW="false" \
     REPLACE="false"
 
-VOLUME ["/input", "/output"]
+VOLUME ["/input"]
 WORKDIR /h265ize
 RUN chmod +x /h265ize/run.sh
 
