@@ -37,7 +37,8 @@ ENV INPUT="/input" \
     DEBUG=false \
     STATSFREQUENCY=15 \
     PREVIEW="false" \
-    REPLACE="false"
+    REPLACE="false" \
+    DIFFLIMIT=""
 
 VOLUME ["/input"]
 WORKDIR /h265ize
