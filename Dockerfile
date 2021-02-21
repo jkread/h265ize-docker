@@ -8,7 +8,7 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     apk add --no-cache bash && apk del git && \
     mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
     rm /var/cache/apk/* && \
-    useradd -ms /bin/bash h265 && \
+    adduser -D -g '' -s /bin/bash h265 && \
     usermod -aG sudo h265
 
 USER h265
