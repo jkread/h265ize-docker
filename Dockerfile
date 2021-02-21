@@ -13,8 +13,6 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && \
     adduser h265 wheel
 
-USER h265
-  
 COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
@@ -50,5 +48,6 @@ VOLUME ["/input"]
 WORKDIR /h265ize
 RUN sudo chown -R h265:h265 /h265ize /input /output /temp && \
     sudo chmod 777 /h265ize /input /output /temp
+USER h265
 
 ENTRYPOINT [ "/h265ize/run.sh" ]
