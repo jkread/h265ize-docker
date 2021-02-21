@@ -46,7 +46,7 @@ ENV INPUT="/input" \
 
 VOLUME ["/input"]
 WORKDIR /h265ize
-RUN sudo chown -R h265:h265 /h265ize /input /output /temp &&
+RUN sudo chown -R h265:h265 /h265ize /input /output /temp && \
     sudo chmod 777 /h265ize /input /output /temp
 
 ENTRYPOINT [ "/h265ize/run.sh" ]
