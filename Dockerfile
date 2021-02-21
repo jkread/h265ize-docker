@@ -10,7 +10,7 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
     rm /var/cache/apk/* && \
     adduser -D -g '' -s /bin/sh h265 && \
-    echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel && \
+    echo '%wheel ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/wheel && \
     adduser h265 wheel
 
 COPY run.sh /h265ize/run.sh
