@@ -13,8 +13,6 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     echo '%wheel ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/wheel && \
     adduser h265 wheel
 
-USER h265
-
 COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
