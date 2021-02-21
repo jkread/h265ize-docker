@@ -7,8 +7,12 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install jkread/h265ize --global --no-optional && \
     apk add --no-cache bash && apk del git && \
     mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
-    rm /var/cache/apk/*
-    
+    rm /var/cache/apk/* && \
+    useradd -ms /bin/bash h265 && \
+    usermod -aG sudo h265
+
+USER h265
+  
 COPY run.sh /h265ize/run.sh
     
 ENV INPUT="/input" \
@@ -42,6 +46,7 @@ ENV INPUT="/input" \
 
 VOLUME ["/input"]
 WORKDIR /h265ize
-RUN chmod +x /h265ize/run.sh
+RUN sudo chown -R h265:h265 /h265ize /input /output /temp &&
+    sudo chmod 777 /h265ize /input /output /temp
 
 ENTRYPOINT [ "/h265ize/run.sh" ]
