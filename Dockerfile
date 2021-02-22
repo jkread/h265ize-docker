@@ -1,4 +1,4 @@
-FROM node:7-alpine
+FROM node:alpine3.13
 MAINTAINER John Read
 
 LABEL h265ize_version="bleading edge" architecture="amd64"
