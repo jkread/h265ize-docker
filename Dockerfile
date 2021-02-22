@@ -37,6 +37,7 @@ ENV INPUT="/input" \
     DEBUG=false \
     STATSFREQUENCY=15 \
     PREVIEW="false" \
+    PREVIEWLENGTH="" \
     REPLACE="false" \
     DIFFLIMIT=""
 
