@@ -15,6 +15,7 @@ args+=( "$INPUT" '-d' "$OUTPUT" '-t' "$TEMP" )
 [ "$DELETE" == "true" ] && args+=( '--delete' ) && echo "# Delete: " $DELETE
 [ "$REPLACE" == "true" ] && args+=( '--replace' ) && echo "# Replace: " $REPLACE
 [ "$PREVIEW" == "true" ] && args+=( '--preview' ) && echo "# Preview: " $PREVIEW
+[ "$PREVIEWlength" != "" ] && args+=( '--preview-length' $(( $PREVIEWLENGTH * 1000 )) ) && echo "# Preview Length: " $PREVIEWLENGTH
 [ "$TUNE" != "" ] && args+=( '--tune' "$TUNE" ) && echo "# Tune: " $TUNE
 [ "$REF" != "" ] && args+=( '--ref' "$REF" ) && echo "# Ref Frames: " $REF
 [ "$WEIGHTB" == "true" ] && args+=( '--weightb' ) && echo "# Weight B: " $WEIGHTB
