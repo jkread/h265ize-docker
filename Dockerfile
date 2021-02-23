@@ -3,7 +3,8 @@ MAINTAINER John Read
 
 LABEL h265ize_version="bleading edge" architecture="amd64"
 
-RUN apk add --no-cache --update-cache git ffmpeg && \
+RUN apk add --no-cache --update-cache ffmpeg && \
+    apk add --no-cache --update-cache mkvtoolnix && \
     npm install jkread/h265ize --global --no-optional && \
     apk add --no-cache bash && apk del git && \
     mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
