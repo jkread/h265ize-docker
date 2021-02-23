@@ -7,7 +7,7 @@ RUN apk add --no-cache --update-cache git ffmpeg && \
     npm install jkread/h265ize --global --no-optional && \
     apk add --no-cache bash && apk del git && \
     mkdir /input && mkdir /output && mkdir /temp && mkdir /h265ize && \
-    rm /var/cache/apk/*
+    rm -R /var/cache/apk
     
 COPY run.sh /h265ize/run.sh
     
