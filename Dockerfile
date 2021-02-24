@@ -20,7 +20,7 @@ ENV INPUT="/input" \
     # Preset Options: ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow, placebo
     PRESET="" \
     # Overide: Allows conversion of videos that are already encoded by the hevc codec
-    OVERIDE="false" \
+    OVERRIDE="false" \
     # Deletes source after encoding is complete and replaces it with new encode; STRONGLY NOT RECOMMENDED
     DELETE="false" \
     # Amount of time to wait after finishing the queue
