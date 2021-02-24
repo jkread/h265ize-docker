@@ -11,7 +11,7 @@ args+=( "$INPUT" '-d' "$OUTPUT" '-t' "$TEMP" )
 [ "$QUALITY" != "" ] && args+=( '-q' "$QUALITY" ) && echo "# Quality: " $QUALITY
 [ "$PRESET" != "" ] && args+=( '-m' "$PRESET" ) && echo "# Preset: " $PRESET
 [ "$ASPRESET" != "" ] && args+=( '--as-preset' "$ASPRESET" ) && echo "# AS Preset: " $ASPRESET
-[ "$OVERIDE" == "true" ] && args+=( '-o' ) && echo "# Overide: " $OVERIDE
+[ "$OVERRIDE" == "true" ] && args+=( '-o' ) && echo "# Override: " $OVERRIDE
 [ "$DELETE" == "true" ] && args+=( '--delete' ) && echo "# Delete: " $DELETE
 [ "$REPLACE" == "true" ] && args+=( '--replace' ) && echo "# Replace: " $REPLACE
 [ "$PREVIEW" == "true" ] && args+=( '--preview' ) && echo "# Preview: " $PREVIEW
